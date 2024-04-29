@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+body {
+    background-color: #FFEFD6;
+    font-family: Poppins, sans-serif;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+.header {
+    width: 100%;
+    padding: 10px; /* Adjust padding for better spacing */
+    background: rgba(245, 245, 245, 0.5); 
+    background: linear-gradient(to top, rgba(245, 245, 245, 0.5), rgba(255, 255, 255, 1)); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure header stays on top */
+}
+
+.header img {
+    width: auto; /* Allow the logo to scale */
+    height: 50px; /* Adjust height for smaller screens */
+    margin: 0 20px; /* Adjust margin for better spacing */
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: center;
+}
+
+.nav ul li {
+    list-style-type: none;
+    margin: 0 10px; /* Adjust margin for better spacing */
+}
+
+.nav ul li.active a {
+    color: black;
+    text-decoration: underline gold;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.nav a:hover {
+    transition: 1s ease-in-out;
+  background: #062E78;
+  stroke-dashoffset: -480;
+  color: #FFDE59;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.banner {
+    width: 1000px;
+    height: 500px; /* Hide overflow content for rounded corners */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+    border-radius: 30px 30px 30px 30px; /* Only top corners are circular */
+    margin: 50px 0px 0px 150px;
+    position: relative; /* Ensure positioning context */
+    z-index: 1; /* Bring the image in front */
+}
+
+
+body {
+  background: hsl(220deg, 10%, 97%);
+  margin:0;
+  padding: 0;
+
+}
+
+body .buttons-arounder{
+	position: fixed;
+	padding: 0px;
+}
+
+.buttons-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background: white;
+  position: fixed;
+  padding: 0.2000em .1em;
+  margin:190px 10px 4px -340px;
+
+}
+
+.button-arounder {
+  position: fixed;
+  font-size: 20px;
+  background: hsl(190deg, 30%, 15%);
+  color: gold;
+  margin: 200px 0px 0px -335px;
+  text-decoration: none;
+
+  
+  box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, .2);
+  transfrom: translateY(0);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+  --dur: .15s;
+  --delay: .15s;
+  --radius: 16px;
+  
+  transition:
+    border-top-left-radius var(--dur) var(--delay) ease-out,
+    border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+    border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+    border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+    box-shadow calc(var(--dur) * 4) ease-out,
+    transform calc(var(--dur) * 4) ease-out,
+    background calc(var(--dur) * 4) steps(4, jump-end);
+}
+
+.button-arounder:hover,
+.button-arounder:focus {
+  box-shadow: 0 4px 8px hsla(190deg, 15%, 5%, .2);
+  transform: translateY(-4px);
+  background: hsl(230deg, 50%, 45%);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.main{
+	min-height: 500px;
+}
+
+.left-side-bar{
+	width: 190px;
+	float: left;
+	border: 1px solid grey 50%;
+	min-height: 50px;
+	margin: 10px 10px 10px 150px;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+  
+}
+
+.left-side-bar h2{
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	font-size: 15px;
+	color: #FFDE59;
+	background-color: #062E78;
+	border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+
+}
+
+.left-side-bar ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.left-side-bar ul li{
+	margin: 0;
+	text-align: center;
+	border-bottom: 1px solid white;
+}
+
+.left-side-bar ul li a{
+	display: block;
+	width: 100%;
+	padding: 5px 0;
+	text-decoration: none;
+	font-size: 15px;
+	color: #062E78;
+	background-color: white;
+
+}
+
+.left-side-bar ul li a:hover{
+	color: darkgoldenrod;
+}
+
+.content{
+	width: 550px;
+	float: left;
+	min-height: 500px;
+	margin: 10px;
+}
+
+.content h1{
+	padding: 0;
+	margin: 0;
+	color: #062E78;
+	font-size: 30px;
+}
+.content h2 {
+    color: #FFDE59;
+    font-weight: normal; /* Set font weight to normal */
+    font-size: 15px;
+    background-color: #062E78;
+    text-align: center;
+
+}
+
+
+.content p{
+	text-align: justify;
+	line-height: 1.5;
+}
+
+.right-side-bar {
+    width: 180px;
+    float: right;
+    min-height: 200px;
+    margin: 1px 100px 0px 50px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adding shadow */
+}
+
+
+
+
+.right-side-bar ul{
+	margin: 0;
+	padding: 20px;
+	border-radius: ;
+}
+
+.right-side-bar ul li{
+	list-style-type: none;
+}
+
+.right-side-bar ul li img{
+	width: 100%;
+}
+
+.right-side-bar h5{
+	margin: 10px 0px 0px 68px;
+}
+
+.footer{
+	clear: both;
+	border-top: 1px solid black;
+	padding: 1px;
+	text-align: center;
+}
+
+.footer {
+    background-image: url('images/banner1.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+    background-size: cover; /* Cover the entire element with the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center; /* Center the background image */
+}
+
+.footer p {
+    font-weight: normal;
+    font-size: 10px;
+    color: white;
+}
+
+.footer img {
+    padding: 0;
+    margin: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner1 {
+    width: 1000px;
+    height: 500px; /* Hide overflow content for rounded corners */
+    margin: 100px 0px 0px 650px;
+}
+
+.banner1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+    border-radius: 30px 30px 30px 30px; /* Only top corners are circular */
+    margin: -200px 0px 0px 150px;
+    position: relative; /* Ensure positioning context */
+    z-index: 1; /* Bring the image in front */
+}
+ 	
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    overflow: hidden;
+    margin-right: 0px;
+    margin-left: 70px;
+}
+.container form .form{
+    position: absolute;
+
+    transition: 0.3s ease;
+}
+.container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+.container form button, .backBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #4070f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    position: absolute;
+}
+.container form .btnText{
+    font-size: 14px;
+    font-weight: 400;
+
+
+}
+form button:hover{
+    background-color: #265df2;
+}
+form button i,
+form .backBtn i{
+    margin: 0 6px;
+}
+form .backBtn i{
+    transform: rotate(180deg);
+}
+form .buttons{
+    display: flex;
+    align-items: center;
+}
+form .buttons button , .backBtn{
+    margin-right: 14px;
+}
+
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}
